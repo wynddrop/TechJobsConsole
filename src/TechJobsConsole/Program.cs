@@ -129,12 +129,14 @@ namespace TechJobsConsole
                 
             foreach (Dictionary<string, string> item in someJobs)
             {
+                Console.WriteLine(" ");
+                Console.WriteLine("*****");
                 foreach (KeyValuePair<string, string> pair in item)
                 {
                     Console.WriteLine(string.Format("{0}: {1}", pair.Key, pair.Value));
 
                  }
-                 Console.WriteLine("*****");
+                Console.WriteLine("*****");
             }
             
 

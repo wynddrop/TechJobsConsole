@@ -50,11 +50,12 @@ namespace TechJobsConsole
             {
                 string aValue = row[column];
 
-                if (aValue.Contains(value))
+                if (aValue.IndexOf(value, StringComparison.OrdinalIgnoreCase) >= 0)
                 {
                     jobs.Add(row);
                 }
             }
+            
 
             return jobs;
         }
@@ -71,9 +72,9 @@ namespace TechJobsConsole
                 int aCount = 0;
                 foreach (KeyValuePair<string, string> pair in row)
                 {
-                    string aValue = pair.Value;
+                    string bValue = pair.Value;
                     //if (aValue.Contains(value))
-                    if (aValue.IndexOf(value, StringComparison.OrdinalIgnoreCase) >= 0)
+                    if (bValue.IndexOf(value, StringComparison.OrdinalIgnoreCase) >= 0)
                     {
                         aCount++;
                     }
